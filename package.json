@@ -2,7 +2,7 @@
   "name": "things",
   "version": "1.0.0",
   "description": "An encyclopaedia of very useless knowledge",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/cargillj/things/issues"
   },
-  "homepage": "https://github.com/cargillj/things#readme"
+  "homepage": "https://github.com/cargillj/things#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.1",
+    "typescript": "^2.7.2"
+  }
 }
