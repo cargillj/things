@@ -2,7 +2,7 @@ import * as express from 'express'
 import * as bodyParser from 'body-parser'
 import {api} from './routes/api/api'
 
-const app = express()
+export const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(bodyParser.json())
