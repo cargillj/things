@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/cargillj/things#readme",
   "devDependencies": {
+    "@types/connect-livereload": "^0.5.31",
+    "connect-livereload": "^0.6.0",
     "gulp": "^3.9.1",
+    "gulp-express": "^0.3.5",
     "gulp-typescript": "^4.0.1",
     "typescript": "^2.7.2"
   },
