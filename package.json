@@ -2,7 +2,7 @@
   "name": "things",
   "version": "1.0.0",
   "description": "An encyclopaedia of very useless knowledge",
-  "main": "./dist/main.js",
+  "main": "./dist/server/server.js",
   "scripts": {
     "start-server": "node ./dist/server/server.js"
   },
