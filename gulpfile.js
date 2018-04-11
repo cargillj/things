@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const ts = require('gulp-typescript')
-const server = require('gulp-express')
+// const livereload = require('gulp-livereload')
+const nodemon = require('gulp-nodemon')
 
 const tsProject = ts.createProject('tsconfig.json')
 
@@ -10,13 +11,15 @@ gulp.task('scripts', () => {
         .js.pipe(gulp.dest('dist'));
 })
 
-gulp.task('dev-server', () => {
-    process.env.node_ENV = 'development'
-    server.run(['./dist/server/server.js'])
-    // gulp.watch('src/**/*.ts', ['scripts', server.run])
-    gulp.watch('src/**/*.ts', (event) => {
-        gulp.start('scripts')
-        server.run()
-        server.notify(event)
+gulp.task('build', ['scripts'])
+
+gulp.task('nodemon', () => {
+    nodemon({
+        script: './dist/server/server.js',
+        watch: 'src',
+        ext: 'ts',
+        tasks: ['build']
     })
 })
+
+gulp.task('default', ['build', 'nodemon'])
