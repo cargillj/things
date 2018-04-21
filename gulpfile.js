@@ -22,8 +22,7 @@ gulp.task('build', ['markup','scripts'])
 gulp.task('nodemon', () => {
     nodemon({
         script: './dist/server/server.js',
-        watch: 'src/server',
-        ext: 'ts',
+        watch: 'src',
         tasks: ['build']
     })
 })
