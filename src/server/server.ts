@@ -6,6 +6,7 @@ export const app = express()
 
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(bodyParser.json())
+app.use('/', express.static('dist/app'))
 
 const port = process.env.PORT || 8080
 
